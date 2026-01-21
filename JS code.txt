@@ -1,0 +1,95 @@
+count number of char : 
+
+function countofchars(str)
+{
+   var count={};
+for(let char of str)
+{
+    if(count[char])
+    {
+       count[char]++
+    }
+   else
+      {
+       count[char]=1
+       }
+}
+return count
+}
+var str1="hello world"
+var mycount=countofchars(str1)
+console.log(mycount)
+
+
+//find largest string in the sentance
+
+function findlongestword(sen)
+{
+    //split the sentence using space
+    const words=sen.split(' ');
+   // track longest word
+   var longestword='';
+   for(const word of words)
+   {
+       if(word.length > longestword.length)
+       longestword = word
+   }
+   return longestword
+}
+const sen = "find the longest word";
+console.log(findlongestword(sen));
+
+
+//remove duplicates from array
+//1. using set
+var x=[1,2,3,6,3,2];
+var y=[...new Set(x)];
+console.log(y)
+
+//using filter & indexOf
+
+newarr=x.filter((v,i,a)=>a.indexOf(v)==i)
+console.log(newarr)
+
+//using reduce
+var z=x.reduce((u,i)=>{return u.includes(i)? u : [...u,i];},[])
+console.log(z);
+
+ //remove duplicates from string
+var str="abcdabc"
+// use set
+var orgstr=[...new Set(str)].join('')
+console.log(orgstr)
+//use filter
+var orgstr1=str.split('').filter((v,i,a)=>{return a.indexOf(v)==i}).join('')
+
+console.log(orgstr1)
+//use for loop
+function removedupstr(str)
+{
+     var mystr=''
+    for(let i=0;i<str.length;i++)
+    {
+        if(!mystr.includes(str[i]))
+        {
+            mystr+=str[i]
+        }
+    }
+    console.log(mystr)
+}
+removedupstr(str)
+
+//remove special chars from string
+var str="abcdabc%&*"
+var str1=str.replace(/[^a-zA-Z]/g,'')
+console.log(str1)
+
+//remove duplicates from object
+var x=[{name:"abc",age:18},
+       {name:"adc",age:20},
+       {name:"abc",age:18}]
+       
+var y = x.filter((o,i,a)=> 
+a.findIndex(i=>i.name==o.name)==i)   
+console.log(y)
+
