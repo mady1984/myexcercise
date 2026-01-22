@@ -93,3 +93,106 @@ var y = x.filter((o,i,a)=>
 a.findIndex(i=>i.name==o.name)==i)   
 console.log(y)
 
+//check the number is odd or even
+var num = 2;
+if(num % 2 == 0)
+{
+    console.log("even")
+}
+else 
+{
+    console.log("odd")
+}
+
+
+//check the number is odd or even
+var num = 2;
+if(num % 2 == 0)
+{
+    console.log("even")
+}
+else 
+{
+    console.log("odd")
+}
+
+
+// remove dubplicate from array of object
+var aobj=[{id:1,name:'abc'},{id:2,name:'xyz'},{id:1,name:'abc'}]
+var robj = aobj.filter(
+  (item, index, self) =>
+    index === self.findIndex(obj => obj.id === item.id))
+console.log(robj)
+
+
+Output for the below
+
+1.what is the output:
+var a=4;
+function disp()
+{
+  b=5;
+  console.log(b);
+  var b=6;
+}
+disp();
+console.log(b)
+
+2.
+
+setTimeout(() => {
+  console.log("1");
+},0);
+
+setTimeout(() => {
+  console.log("2");
+},500);
+
+setTimeout(() => {
+  console.log("3");
+},200);
+console.log("Thankyou")
+
+
+3.
+setTimeout(() => {
+  console.log("0");
+},0);
+
+function disp()
+{
+    console.log("hi")
+}
+setTimeout(() => {
+  console.log("1");
+},2);
+disp();
+console.log("Thankyou")
+
+
+4.
+
+disp();
+var b=8;
+function disp()
+{
+    var a =5;
+    console.log(a);
+    console.log(b);
+}
+
+5.
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+
+6.
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+
+let a = { x: 1 };
+let b = { x: 1 };
+console.log(a == b);
+    
+
